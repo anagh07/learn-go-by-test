@@ -43,9 +43,7 @@ workflows:
   version: 2
   lint-and-test:
     jobs:
-      - lint:
-          pull_requests:
-            only: main
+      - lint
       - test:
           requires:
             - lint
