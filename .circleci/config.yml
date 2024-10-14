@@ -44,10 +44,6 @@ workflows:
   lint-and-test:
     jobs:
       - lint:
-          filters:
-            branches:
-              only:
-                - main
           pull_requests:
             only: main
       - test:
