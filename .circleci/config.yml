@@ -46,7 +46,10 @@ workflows:
       - lint:
           filters:
             branches:
-              only: main
+              only:
+                - main
+            tags:
+              ignore: /.*/
       - test:
           requires:
             - lint
