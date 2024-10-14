@@ -42,7 +42,10 @@ jobs:
 workflows:
   lint-and-test:
     jobs:
-      - lint
+      - lint:
+          filters:
+            branches:
+              only: main
       - test:
           requires:
             - lint
