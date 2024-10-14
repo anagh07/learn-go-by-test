@@ -41,7 +41,6 @@ jobs:
 
 workflows:
   lint-and-test:
-    when: << pipeline.source >> == "pull_request"
     jobs:
       - lint
       - test:
