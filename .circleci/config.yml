@@ -49,7 +49,6 @@ workflows:
               ignore: /.*/
             tags:
               only: /^pull\/.*$/
-              ignore: /.*/
       - test:
           requires:
             - lint
