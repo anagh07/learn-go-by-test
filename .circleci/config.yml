@@ -48,10 +48,8 @@ workflows:
             branches:
               only:
                 - main
+          pull_requests:
+            only: main
       - test:
           requires:
             - lint
-          filters:
-            branches:
-              only:
-                - main
