@@ -40,13 +40,10 @@ jobs:
           command: go test -v ./...
 
 workflows:
-  version: 2
   lint-and-test:
+    when: << pipeline.source >> == "pull_request"
     jobs:
-      - lint:
-          filters:
-            branches:
-              only: main
+      - lint
       - test:
           requires:
             - lint
