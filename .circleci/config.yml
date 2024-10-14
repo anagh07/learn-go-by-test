@@ -46,9 +46,9 @@ workflows:
       - lint:
           filters:
             branches:
-              only:
-                - main
+              ignore: /.*/
             tags:
+              only: /^pull\/.*$/
               ignore: /.*/
       - test:
           requires:
