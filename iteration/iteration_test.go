@@ -10,8 +10,8 @@ func TestRepeat(t *testing.T) {
 	}
 }
 
-func BenchMarkRepeat(b *testing.B) {
-	for range b.N {
+func BenchmarkRepeat(b *testing.B) {
+	for i := 0; i < b.N; i++ {
 		Repeat("a", 5)
 	}
 }
